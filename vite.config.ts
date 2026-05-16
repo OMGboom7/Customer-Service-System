@@ -24,6 +24,12 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           secure: false,
           rewrite: () => '/',
+          configure: (proxy) => {
+            proxy.on('proxyReqWs', (proxyReq) => {
+              // 代理层改写 Origin，绕过浏览器的跨源限制
+              proxyReq.setHeader('Origin', 'https://oc.p07.icu')
+            })
+          },
         },
       },
     },
