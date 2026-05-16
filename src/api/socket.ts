@@ -28,12 +28,7 @@ export class GatewaySocket {
   }
 
   private getWsUrl(): string {
-    // 网关和页面不同 host 时直连（开发环境、远程网关），同 host 时走代理
-    const targetHost = new URL(this.url).host
-    if (targetHost !== location.host) {
-      return this.url.replace(/^http/, 'ws')
-    }
-    return `ws://${location.host}/gw`
+    return this.url.replace(/^http/, 'ws')
   }
 
   async connect(): Promise<void> {
