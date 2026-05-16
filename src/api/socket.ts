@@ -56,7 +56,7 @@ export class GatewaySocket {
           method: 'connect',
           params: {
             minProtocol: 3, maxProtocol: 4,
-            client: { id: 'gateway-client', version: '1.0', platform: 'web', mode: 'backend' },
+            client: { id: 'openclaw-control-ui', version: '1.0', platform: 'web', mode: 'webchat', instanceId: 'cs-' + cid },
             role: 'operator',
             scopes: ['operator.admin', 'operator.read', 'operator.write', 'operator.approvals', 'operator.pairing'],
             caps: ['tool-events'],
