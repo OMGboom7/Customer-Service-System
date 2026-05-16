@@ -16,6 +16,8 @@ export default defineConfig(({ mode }) => {
         '/gw': {
           target: proxyTarget,
           ws: true,
+          changeOrigin: true,
+          secure: false,
           rewrite: () => '/',
         },
       },
