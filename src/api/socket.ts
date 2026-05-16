@@ -28,6 +28,8 @@ export class GatewaySocket {
   }
 
   private getWsUrl(): string {
+    const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+    if (isDev) return `ws://${location.host}/gw`
     return this.url.replace(/^http/, 'ws')
   }
 
