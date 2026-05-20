@@ -13,3 +13,16 @@ backend/data/
 # Backend secrets
 backend/src/main/resources/application.yml
 backend/src/main/resources/application-*.yml
+
+# Backend
+backend/target/
+backend/data/
+*.db
+*.db.mv.db
+*.db.trace.db
+backend/src/main/resources/application*.yml
+backend/src/main/resources/application.yml
+
+# Frontend build
+frontend/dist/
+frontend/node_modules/
