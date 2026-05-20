@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
   const proxyTarget = env.VITE_GATEWAY_URL || 'https://oc.p07.icu'
 
   return {
+    base: "/app/",
     plugins: [
       react(),
       basicSsl(),
