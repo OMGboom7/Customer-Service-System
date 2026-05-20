@@ -2,3 +2,14 @@ node_modules/
 dist/
 .env
 *.local
+
+# Backend build artifacts
+backend/target/
+backend/data/
+*.db
+*.db.mv.db
+*.db.trace.db
+
+# Backend secrets
+backend/src/main/resources/application.yml
+backend/src/main/resources/application-*.yml
