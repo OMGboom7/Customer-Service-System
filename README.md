@@ -23,41 +23,38 @@
 ## 项目结构
 
 ```
-├── frontend/                  ← 前端 (React + Vite)
-│   ├── src/
-│   │   ├── api/               Gateway RPC 封装
-│   │   ├── components/
-│   │   │   ├── auth/          登录表单
-│   │   │   ├── chat/          聊天面板、消息气泡、输入框
-│   │   │   ├── common/        通用组件
-│   │   │   ├── info/          客户信息面板
-│   │   │   ├── layout/        布局组件
-│   │   │   └── sidebar/       会话列表
-│   │   ├── hooks/             自定义 Hooks
-│   │   ├── pages/             页面组件
-│   │   ├── store/             Zustand 状态管理
-│   │   ├── styles/            全局样式
-│   │   └── types/             TypeScript 类型定义
-│   ├── index.html
-│   ├── vite.config.ts
-│   └── package.json
+├── src/                      ← 前端 (React + Vite，根目录)
+│   ├── api/                  Gateway RPC 封装
+│   ├── components/
+│   │   ├── auth/             登录表单
+│   │   ├── chat/             聊天面板、消息气泡、输入框
+│   │   ├── common/           通用组件
+│   │   ├── info/             客户信息面板
+│   │   ├── layout/           布局组件
+│   │   └── sidebar/          会话列表
+│   ├── hooks/                自定义 Hooks
+│   ├── pages/                页面组件
+│   ├── store/                Zustand 状态管理
+│   ├── styles/               全局样式
+│   └── types/                TypeScript 类型定义
 │
-├── backend/                   ← 🆕 后端 (Spring Boot)
+├── backend/                  ← 后端 (Spring Boot)
 │   ├── pom.xml
 │   └── src/main/java/com/openclaw/test/
-│       ├── config/            JWT、安全、Swagger 配置
-│       ├── controller/        REST 控制器
-│       ├── dto/               数据传输对象
-│       ├── entity/            JPA 实体
-│       ├── repository/        数据访问层
-│       ├── service/           业务逻辑
-│       └── util/              文件解析、编码检测
+│       ├── config/           JWT、安全、Swagger 配置
+│       ├── controller/       REST 控制器
+│       ├── dto/              数据传输对象
+│       ├── entity/           JPA 实体
+│       ├── repository/       数据访问层
+│       ├── service/          业务逻辑
+│       └── util/             文件解析、编码检测
 │
-├── dist/                      前端构建产物（生产用，被 gitignore）
-├── README.md
-├── .env.example
+├── index.html                前端入口
+├── vite.config.ts            前端构建配置
+├── package.json              前端依赖
+├── .env.example              环境变量模板
 ├── .gitignore
-└── package.json
+└── README.md
 ```
 
 ## 快速开始
